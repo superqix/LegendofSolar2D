@@ -1,21 +1,7 @@
 # ponyblitz
-A light weight Corona+Lua skeleton for game jams/compos
+Legend of Solar2D
 
-This is a lightweight skeleton that is intended to make it a bit easier to get a game jam entry up and going with CoronaSDK. It has a simple text based menu scene, a game scene where you can choose from a simple "world" organization of displayObjects or easily load in a tiled .JSON map as your world.
+This is a down and dirty framework for a Zelda-like top down pixel-y RPG in Solar2D. Very basic, but great bones to start your own project.
 
-![Screenshot](http://i.imgur.com/leBoVNv.gif)
+Uses a re-mixed tileset from PixelBoy and other CC0 tiles, plus some new CC0 tiles my Ponywolf
 
-It also includes a pre-made HUD layer for score and a few open source libraries that have been released in various places by ponywolf.
-
-* joyKey - axis to keystroke
-* ponycolor - simple color conversion
-* ponymenu - text menu system
-* snap - displayObject alignment
-* ponystroke - stroked text
-* ponytiled - tiled map loader
-* ponyfx - various quick transition effects
-* visualMonitor - frame rate, displayObject counter
-* vjoy - virtual joystick, button lib
-* light - lighting system from Darkest Tower
-* scanlines - generated scanlines
-* pixelWorld - a low-rez render via snapshot
