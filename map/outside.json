@@ -1,4 +1,11 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "target":"."
+        }
+    },
  "height":32,
  "infinite":false,
  "layers":[
@@ -1157,29 +1164,6 @@
                  "terrain":[2, -1, -1, -1]
                 }],
          "tilewidth":16
-        }, 
-        {
-         "columns":0,
-         "firstgid":577,
-         "grid":
-            {
-             "height":1,
-             "orientation":"orthogonal",
-             "width":1
-            },
-         "margin":0,
-         "name":"ui",
-         "spacing":0,
-         "tilecount":1,
-         "tileheight":32,
-         "tiles":[
-                {
-                 "id":1,
-                 "image":"bubbleSign.png",
-                 "imageheight":32,
-                 "imagewidth":32
-                }],
-         "tilewidth":32
         }],
  "tilewidth":16,
  "type":"map",
