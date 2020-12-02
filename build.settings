@@ -1,0 +1,82 @@
+--    ____                                   ______
+--   / __ \____  ____  __  ___      ______  / / __/
+--  / /_/ / __ \/ __ \/ / / / | /| / / __ \/ / /_
+-- / ____/ /_/ / / / / /_/ /| |/ |/ / /_/ / / __/
+--/_/    \____/_/ /_/\__, / |__/|__/\____/_/_/
+--                  /____/
+
+-- Commented build.settings by Ponywolf
+-- Targeting desktop builds
+
+settings = {
+
+--  The build.settings file can be used to set app orientation in relation to the
+--  device's physical orientation in space — this includes auto-orientation triggered
+--  by the accelerometer if the device is rotated or flipped during runtime.
+
+--  "portrait" device in the vertical position with the home button at the bottom
+--  "portraitUpsideDown" device in the vertical position with the home button at the top
+--  "landscapeRight" device in the horizontal position with the home button at the right
+--  "landscapeLeft" device in the horizontal position with the home button at the left
+
+
+  orientation = {
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+    default = "landscapeRight",
+    supported = { "landscapeRight", "landscapeLeft"}
+  },
+
+  --  This setting can be used to turned on to disable debug symbol stripping altogether
+  build = {
+    --neverStripDebugInfo = true
+  },
+
+  window = {
+    titleText = {
+      -- The "default" text will be used if the system is using a language and/or
+      -- country code not defined below. This serves as a fallback mechanism.
+      default = "Untitled Plant Game",
+		},
+    resizable = false,
+		defaultViewWidth = 640,
+		defaultViewHeight = 480,
+		minViewWidth = 640,
+		minViewHeight = 480,
+  },
+
+  iphone = {
+	  xcassets = "Images.xcassets",
+    plist = {
+			NSCalendarsUsageDescription = "ponyblitz would like to use your calendar.",
+			NSPhotoLibraryUsageDescription = "ponyblitz would like to store a photo.",
+			NSCameraUsageDescription = "ponyblitz would like to take a photo.",			
+			UILaunchStoryboardName = "LaunchScreen",
+      NSAppTransportSecurity = { NSAllowsArbitraryLoads=true },
+      ITSAppUsesNonExemptEncryption = false,
+    },
+  },
+
+	android =
+	{
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+			"android.permission.ACCESS_NETWORK_STATE",
+			"android.permission.WRITE_EXTERNAL_STORAGE",
+		},
+	},
+
+  --  Files to be excluded are specified per platform (iphone, android or all) using simple pattern
+  --  matching where * means any string of characters, sometimes including /
+  excludeFiles = {
+
+    -- Exclude all files at paths
+    all = { "*art/*", "README.md" },
+    android = { "*.xcassets*", "*.storyboardc*",  },
+		ios = { "*AndroidResources*" },
+    web = { "*.xcassets*", "*.storyboardc*", "*AndroidResources*" },
+		win32 = { "*.xcassets*", "*.storyboardc*", "*AndroidResources*" },
+		macos = { "*.xcassets*", "*.storyboardc*", "*AndroidResources*" },
+  },
+}
