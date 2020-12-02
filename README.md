@@ -1,5 +1,4 @@
-# ponyblitz
-==The Legend of Solar2D
+# The Legend of Solar2D
 
 This is a down and dirty framework for a Zelda-like top down pixel-y RPG in Solar2D. Very basic, but great bones to start your own project.
 
